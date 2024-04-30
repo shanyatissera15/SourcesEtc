@@ -7,7 +7,25 @@
         padding: 0;
         background-color: #f8f8f8;
     }
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
 
+    .tab-header {
+      
+      color: #fff;
+      background-color: #388E3C;
+      padding: 10px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 10px;
+    }
     header {
         background-color: #4CAF50;
         color: #fff;
@@ -110,18 +128,49 @@
         </ul>
     </nav>
     <main>
-      <h1>Affects of Cell Phones on Teens & Academic Performance</h1>
-        <h3>Studies, Journal Articles, and Metadata</h3>
+      <div class="tab">
+        <div class="tab-header" onclick="toggleTab()">Affects of Cell Phones on Teens & Academic Performance</div>
+        <div class="tab-content" id="tabContent">
+                  <h3>Studies, Journal Articles, and Metadata</h3>
 
-        <i>The Impact of Mobile Phone Usage on Student Learning" by J. Roe, et al. (2016) - This study explores how excessive mobile phone usage negatively affects students' ability to concentrate and learn effectively.</i>
-<br><br>
-      <a href="https://momot.rs/d3/y/1714506624/100/i/scimag/22700000/22733000/10.1080/03634523.2013.767917.pdf~/M7SEMNKQVucLehNn4Gt4qA/The%20Impact%20of%20Mobile%20Phone%20Usage%20on%20Student%20Learning%20--%20Kuznekoff%2C%20Jeffrey%20H_%3B%20Titsworth%2C%20Scott%20--%20Communication%20Education%2C%20%233%2C%2062%2C%20pages%20233-252%2C%20--%2010_1080%2F03634523_2013_767917%20--%20a72f9eb06a303b71fb5e6080167ed52e%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
-     <br>
-      <br>
-          <i>The Use of Mobile Learning in Science: A Systematic Review" by S. Hsu and L. Ching (2017) - This systematic review investigates the effectiveness of mobile learning in science education and its impact on students' motivation and interest in learning.</i>
-  <br><br>
-        <a href="https://wbsg8v.xyz/d3/y/1714506934/112/i/scimag/49800000/49898000/10.1007/s10956-015-9597-x.pdf~/kHWPkbPuUrijmLz8B5LfWw/The%20Use%20of%20Mobile%20Learning%20in%20Science%3A%20A%20Systematic%20Review%20--%20Crompton%2C%20Helen%3B%20Burke%2C%20Diane%3B%20Gregory%2C%20Kristen%20H_%3B%20Gr%C3%A4be%2C%20--%20Journal%20of%20Science%20--%2010_1007%2Fs10956-015-9597-x%20--%2061d91fbba2ccf7c2759684ec942f91a1%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
+                  <i>"The Impact of Mobile Phone Usage on Student Learning" by J. Roe, et al. (2016) - This study explores how excessive mobile phone usage negatively affects students' ability to concentrate and learn effectively.</i>
+          <br><br>
+                <a href="https://momot.rs/d3/y/1714506624/100/i/scimag/22700000/22733000/10.1080/03634523.2013.767917.pdf~/M7SEMNKQVucLehNn4Gt4qA/The%20Impact%20of%20Mobile%20Phone%20Usage%20on%20Student%20Learning%20--%20Kuznekoff%2C%20Jeffrey%20H_%3B%20Titsworth%2C%20Scott%20--%20Communication%20Education%2C%20%233%2C%2062%2C%20pages%20233-252%2C%20--%2010_1080%2F03634523_2013_767917%20--%20a72f9eb06a303b71fb5e6080167ed52e%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
+               <br>
+                <br>
+                    <i>"The Use of Mobile Learning in Science: A Systematic Review" by S. Hsu and L. Ching (2017) - This systematic review investigates the effectiveness of mobile learning in science education and its impact on students' motivation and interest in learning.</i>
+            <br><br>
+                  <a href="https://wbsg8v.xyz/d3/y/1714506934/112/i/scimag/49800000/49898000/10.1007/s10956-015-9597-x.pdf~/kHWPkbPuUrijmLz8B5LfWw/The%20Use%20of%20Mobile%20Learning%20in%20Science%3A%20A%20Systematic%20Review%20--%20Crompton%2C%20Helen%3B%20Burke%2C%20Diane%3B%20Gregory%2C%20Kristen%20H_%3B%20Gr%C3%A4be%2C%20--%20Journal%20of%20Science%20--%2010_1007%2Fs10956-015-9597-x%20--%2061d91fbba2ccf7c2759684ec942f91a1%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
+                 <br>
+                  <br>
+                      <i>"Cell Phones in the Classroom: Teachers’ Perspectives of Inclusion, Benefits, and Barriers" by Richard E. Ferdig, Kristine E. Pytash - Addressing teachers' viewpoints, this article discusses the inclusion of cell phones in classrooms. It explores the perceived advantages, challenges, and strategies for effectively integrating cell phones into educational settings.</i>
+                <br><br>
+                    <a href="https://wbsg8v.xyz/d3/y/1714512861/100/i/scimag/29300000/29391000/10.1080/07380569.2013.844637.pdf~/P1v15p8vUwR3jW-EsHRdsg/Cell%20Phones%20in%20the%20Classroom%3A%20Teachers%E2%80%99%20Perspectives%20of%20--%20Thomas%2C%20Kevin%20M_%3B%20O%E2%80%99Bannon%2C%20Blanche%20W_%3B%20Bolton%2C%20Natalie%20--%20Computers%20in%20the%20Schools%2C%20%234%2C%20--%2010_1080%2F07380569_2013_844637%20--%204be4248acbbfc67a4d271ed871ba1710%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
+          <h3>Webpages</h3>
+          <i>National Library of Medicine: Smartphones, social media use and youth mental health</i><br><br>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7012622/#:~:text=An%20observational%20study%20showed%20that,%2C%20print%20media%2C%20homework%2C%20religious">visit here!</a><br><br>
+          <i>Sanford Health: Smartphone impacts on teenagers: Positive and negative</i><br><br>
+          <a href="https://news.sanfordhealth.org/childrens/smartphone-impacts-on-teens/">visit here!</a><br><br>
+          <i>Scientific American: Are Smartphones Really Destroying the Lives of Teenagers?</i><br><br>
+          <a href="https://www.scientificamerican.com/article/are-smartphones-really-destroying-the-lives-of-teenagers/">visit here!</a><br><br>
+          <h3>Videos</h3>
+          <i>Teenage Cell Phone Use | Rya Kirchberg | TEDxHowellHighSchool</i>
+          <br><br>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/pB1kWfymJas?si=gsDXn8ro3HwmaX1r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+
 
     </main>
+  <script>
+    function toggleTab() {
+      var content = document.getElementById("tabContent");
+      if (content.style.display === "none") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
