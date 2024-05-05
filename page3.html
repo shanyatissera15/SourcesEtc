@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sources.etc</title>
+    <title>Sources.etc - Blog</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -11,131 +11,26 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
-        }
-        /* Additional Styles for Blog */
-        .access-button button,
-        .search-bar input[type="text"] {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-size: 16px;
-        }
+          }
+            .tab {
+              overflow: hidden;
+              border: 1px solid #ccc;
+              background-color: #f1f1f1;
+            }
 
-        .access-button button {
-            background-color: #388E3C;
-            color: #fff;
-        }
+            .tab-header {
 
-        .access-button button:hover {
-            background-color: #2E7D32;
-        }
+              color: #fff;
+              background-color: #388E3C;
+              padding: 10px;
+              cursor: pointer;
+              user-select: none;
+            }
 
-        .search-bar input[type="text"] {
-            width: 100%;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            padding: 10px;
-        }
-
-        .password-prompt-content button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-size: 16px;
-            background-color: #388E3C;
-            color: #fff;
-        }
-
-        .password-prompt-content button:hover {
-            background-color: #2E7D32;
-        }
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            border-bottom: 2px solid #388E3C;
-        }
-
-        nav {
-            background-color: #2E7D32;
-            padding: 10px 0;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        li {
-            display: inline;
-        }
-
-        a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            transition: background-color 0.3s;
-            background-color: #2E7D32;
-            border-radius: 25px;
-        }
-
-        a:hover {
-            background-color: #388E3C;
-        }
-
-        main {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        h1 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        /* Button Styles */
-        .btn {
-            background-color: #388E3C;
-            color: #fff; /* Changed button text color */
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #388E3C;
-        }
-
-        /* Academic Style */
-        header {
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        nav a {
-            font-weight: bold;
-        }
-
-        main {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
+            .tab-content {
+              display: none;
+              padding: 10px;
+            }
         /* Additional Styles for Blog */
         .blog-container {
             max-width: 800px;
@@ -201,6 +96,119 @@
             margin-top: 20px;
             text-align: center;
         }
+          header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid #388E3C;
+          }
+
+          nav {
+            background-color: #2E7D32;
+            padding: 10px 0;
+          }
+
+          ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+          }
+
+          li {
+            display: inline;
+          }
+
+          a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            background-color: #2E7D32;
+          border-radius: 25px
+          }
+
+          a:hover {
+            background-color: #388E3C;
+          }
+
+          main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          p {
+            line-height: 1.6;
+          }
+
+          h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+          }
+
+          /* Button Styles */
+          .btn {
+            background-color: #388E3C;
+            color: #fff; /* Changed button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+          }
+
+          .btn:hover {
+            background-color: #388E3C;
+          }
+
+          /* Academic Style */
+          header {
+            font-family: 'Times New Roman', Times, serif;
+          }
+
+          nav a {
+            font-weight: bold;
+          }
+
+          main {
+            font-size: 16px;
+            line-height: 1.6;
+          }
+
+         
+
+        .search-bar {
+            margin-bottom: 20px;
+            display: flex; /* Use flexbox for layout */
+        }
+
+        #searchInput {
+            flex: 1; /* Take up remaining space */
+            padding: 10px; /* Adjust padding */
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius */
+            font-size: 16px; /* Adjust font size */
+        }
+
+        /* Button styling */
+        #searchButton {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #388E3C;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        #searchButton:hover {
+            background-color: #2E7D32;
+        }
     </style>
 </head>
 <body>
@@ -230,26 +238,12 @@
     <!-- Blog Search Bar -->
     <div class="search-bar">
         <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search posts...">
+        <button id="searchButton">Search</button>
     </div>
-
-    <!-- Blog Form -->
-    <form class="blog-form" id="blogForm" style="display: none;">
-        <h2>Add a New Post</h2>
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title" required><br>
-        <label for="content">Content:</label><br>
-        <textarea id="content" name="content" rows="4" required></textarea><br>
-        <button type="submit" class="btn">Submit</button>
-    </form>
 
     <!-- Display Existing Blog Posts -->
     <div id="blogPosts">
         <!-- Blog posts will be loaded dynamically here -->
-    </div>
-
-    <!-- Access Password Button -->
-    <div class="access-button">
-        <button onclick="showPasswordPrompt()">Access Password</button>
     </div>
 </div>
 
@@ -263,7 +257,6 @@
 
     // Display password prompt
     var passwordPrompt = document.getElementById("passwordPrompt");
-    var blogForm = document.getElementById("blogForm");
     passwordPrompt.style.display = "none";
 
     // Function to check password
@@ -272,7 +265,7 @@
         // For demonstration purposes, let's consider "password" as the correct password
         if (password === "Shanya15") {
             passwordPrompt.style.display = "none";
-            blogForm.style.display = "block"; // Show blog form
+            displayBlogPosts(samplePosts); // Display blog posts after successful login
         } else {
             alert("Incorrect password");
         }
@@ -296,7 +289,7 @@
         });
     }
 
-    // Initial display of sample posts
+    // Initial display of sample posts (without the need for password)
     displayBlogPosts(samplePosts);
 
     // Function to filter blog posts based on search query
@@ -315,11 +308,6 @@
                 blogPosts[i].style.display = "none";
             }
         }
-    }
-
-    // Function to show password prompt
-    function showPasswordPrompt() {
-        passwordPrompt.style.display = "flex";
     }
 </script>
 </body>
