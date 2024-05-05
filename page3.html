@@ -1,176 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f8f8;
-    }
-    .tab {
-      overflow: hidden;
-      border: 1px solid #ccc;
-      background-color: #f1f1f1;
-    }
-
-    .tab-header {
-      
-      color: #fff;
-      background-color: #388E3C;
-      padding: 10px;
-      cursor: pointer;
-      user-select: none;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 10px;
-    }
-    header {
-        background-color: #4CAF50;
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-        font-size: 24px;
-        border-bottom: 2px solid #388E3C;
-    }
-
-    nav {
-        background-color: #2E7D32;
-        padding: 10px 0;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-
-    li {
-        display: inline;
-    }
-
-    a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: background-color 0.3s;
-        background-color: #2E7D32;
-      border-radius: 25px
-    }
-
-    a:hover {
-        background-color: #388E3C;
-    }
-
-    main {
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    p {
-        line-height: 1.6;
-    }
-
-    h1 {
-        font-size: 32px;
-        margin-bottom: 20px;
-    }
-
-    /* Button Styles */
-    .btn {
-        background-color: #388E3C;
-        color: #fff; /* Changed button text color */
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #388E3C;
-    }
-
-    /* Academic Style */
-    header {
-        font-family: 'Times New Roman', Times, serif;
-    }
-
-    nav a {
-        font-weight: bold;
-    }
-
-    main {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sources.etc</title>
+    <title>Sources.etc - Blog</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        /* Additional Styles for Blog */
+        .access-button button,
+        .search-bar input[type="text"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .access-button button {
+            background-color: #388E3C;
+            color: #fff;
+        }
+
+        .access-button button:hover {
+            background-color: #2E7D32;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .password-prompt-content button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            background-color: #388E3C;
+            color: #fff;
+        }
+
+        .password-prompt-content button:hover {
+            background-color: #2E7D32;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            border-bottom: 2px solid #388E3C;
+        }
+
+        nav {
+            background-color: #2E7D32;
+            padding: 10px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            display: inline;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+            background-color: #2E7D32;
+            border-radius: 25px;
+        }
+
+        a:hover {
+            background-color: #388E3C;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .btn {
+            background-color: #388E3C;
+            color: #fff; /* Changed button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #388E3C;
+        }
+
+        /* Academic Style */
+        header {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        nav a {
+            font-weight: bold;
+        }
+
+        main {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Additional Styles for Blog */
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-form {
+            margin-bottom: 20px;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer; /* Add cursor pointer for preview */
+        }
+
+        .blog-post h2 {
+            margin-top: 0;
+            cursor: pointer; /* Add cursor pointer for preview */
+            color: #007bff; /* Change color to blue */
+        }
+
+        .blog-post h2:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+
+        .blog-post p {
+            display: none; /* Initially hide blog content */
+        }
+
+        .blog-post.active p {
+            display: block; /* Show content when post is active */
+        }
+
+        .search-bar {
+            margin-bottom: 20px;
+        }
+
+        .password-prompt {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .password-prompt-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .access-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Sources.etc</h1>
-    </header>
-    <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="page1.html">Regents/AP Exams</a></li>
-          <li><a href="page2.html">Library</a></li>
-          <li><a href="page3.html">Common Research Topics</a></li>
-        </ul>
-    </nav>
-    <main>
-      <div class="tab">
-        <div class="tab-header" onclick="toggleTab()">Affects of Cell Phones on Teens & Academic Performance</div>
-        <div class="tab-content" id="tabContent">
-                  <h3>Studies, Journal Articles, and Metadata</h3>
+<header>
+    <h1>Sources.etc</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page1.html">Regents & SHSAT</a></li>
+        <li><a href="page2.html">Library</a></li>
+        <li><a href="page3.html">Research</a></li>
+    </ul>
+</nav>
 
-                  <i>"The Impact of Mobile Phone Usage on Student Learning" by J. Roe, et al. (2016) - This study explores how excessive mobile phone usage negatively affects students' ability to concentrate and learn effectively.</i>
-          <br><br>
-                <a href="https://momot.rs/d3/y/1714506624/100/i/scimag/22700000/22733000/10.1080/03634523.2013.767917.pdf~/M7SEMNKQVucLehNn4Gt4qA/The%20Impact%20of%20Mobile%20Phone%20Usage%20on%20Student%20Learning%20--%20Kuznekoff%2C%20Jeffrey%20H_%3B%20Titsworth%2C%20Scott%20--%20Communication%20Education%2C%20%233%2C%2062%2C%20pages%20233-252%2C%20--%2010_1080%2F03634523_2013_767917%20--%20a72f9eb06a303b71fb5e6080167ed52e%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
-               <br>
-                <br>
-                    <i>"The Use of Mobile Learning in Science: A Systematic Review" by S. Hsu and L. Ching (2017) - This systematic review investigates the effectiveness of mobile learning in science education and its impact on students' motivation and interest in learning.</i>
-            <br><br>
-                  <a href="https://wbsg8v.xyz/d3/y/1714506934/112/i/scimag/49800000/49898000/10.1007/s10956-015-9597-x.pdf~/kHWPkbPuUrijmLz8B5LfWw/The%20Use%20of%20Mobile%20Learning%20in%20Science%3A%20A%20Systematic%20Review%20--%20Crompton%2C%20Helen%3B%20Burke%2C%20Diane%3B%20Gregory%2C%20Kristen%20H_%3B%20Gr%C3%A4be%2C%20--%20Journal%20of%20Science%20--%2010_1007%2Fs10956-015-9597-x%20--%2061d91fbba2ccf7c2759684ec942f91a1%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
-                 <br>
-                  <br>
-                      <i>"Cell Phones in the Classroom: Teachers’ Perspectives of Inclusion, Benefits, and Barriers" by Richard E. Ferdig, Kristine E. Pytash - Addressing teachers' viewpoints, this article discusses the inclusion of cell phones in classrooms. It explores the perceived advantages, challenges, and strategies for effectively integrating cell phones into educational settings.</i>
-                <br><br>
-                    <a href="https://wbsg8v.xyz/d3/y/1714512861/100/i/scimag/29300000/29391000/10.1080/07380569.2013.844637.pdf~/P1v15p8vUwR3jW-EsHRdsg/Cell%20Phones%20in%20the%20Classroom%3A%20Teachers%E2%80%99%20Perspectives%20of%20--%20Thomas%2C%20Kevin%20M_%3B%20O%E2%80%99Bannon%2C%20Blanche%20W_%3B%20Bolton%2C%20Natalie%20--%20Computers%20in%20the%20Schools%2C%20%234%2C%20--%2010_1080%2F07380569_2013_844637%20--%204be4248acbbfc67a4d271ed871ba1710%20--%20Anna%E2%80%99s%20Archive.pdf">download here!</a>
-          <h3>Webpages</h3>
-          <i>National Library of Medicine: Smartphones, social media use and youth mental health</i><br><br>
-          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7012622/#:~:text=An%20observational%20study%20showed%20that,%2C%20print%20media%2C%20homework%2C%20religious">visit here!</a><br><br>
-          <i>Sanford Health: Smartphone impacts on teenagers: Positive and negative</i><br><br>
-          <a href="https://news.sanfordhealth.org/childrens/smartphone-impacts-on-teens/">visit here!</a><br><br>
-          <i>Scientific American: Are Smartphones Really Destroying the Lives of Teenagers?</i><br><br>
-          <a href="https://www.scientificamerican.com/article/are-smartphones-really-destroying-the-lives-of-teenagers/">visit here!</a><br><br>
-          <h3>Videos</h3>
-          <i>Teenage Cell Phone Use | Rya Kirchberg | TEDxHowellHighSchool</i>
-          <br><br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/pB1kWfymJas?si=gsDXn8ro3HwmaX1r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      </div>
+<!-- Password Prompt -->
+<div class="password-prompt" id="passwordPrompt">
+    <div class="password-prompt-content">
+        <h2>Password Required</h2>
+        <p>Please enter the password to edit the blog:</p>
+        <input type="password" id="passwordInput">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+</div>
 
+<div class="blog-container">
+    <!-- Blog Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search posts...">
+    </div>
 
-    </main>
-  <script>
-    function toggleTab() {
-      var content = document.getElementById("tabContent");
-      if (content.style.display === "none") {
-        content.style.display = "block";
-      } else {
-        content.style.display = "none";
-      }
+    <!-- Blog Form -->
+    <form class="blog-form" id="blogForm" style="display: none;">
+        <h2>Add a New Post</h2>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="content" rows="4" required></textarea><br>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <!-- Display Existing Blog Posts -->
+    <div id="blogPosts">
+        <!-- Blog posts will be loaded dynamically here -->
+    </div>
+
+    <!-- Access Password Button -->
+    <div class="access-button">
+        <button onclick="showPasswordPrompt()">Access Password</button>
+    </div>
+</div>
+
+<script>
+    // Sample data for demonstration
+    var samplePosts = [
+        { title: "Scientists are Creating 3D Printed Hearts to Revolutionize Space Travel", content: "etc", url: "test.html" },
+        { title: "What's Next for the Euclid Space Telescope?", content: "etc", url: "euclid.html" },
+        { title: "What's in a Black Hole?", content: "etc", url: "blackhole.html" }
+    ];
+
+    // Display password prompt
+    var passwordPrompt = document.getElementById("passwordPrompt");
+    var blogForm = document.getElementById("blogForm");
+    passwordPrompt.style.display = "none";
+
+    // Function to check password
+    function checkPassword() {
+        var password = document.getElementById("passwordInput").value;
+        // For demonstration purposes, let's consider "password" as the correct password
+        if (password === "Shanya15") {
+            passwordPrompt.style.display = "none";
+            blogForm.style.display = "block"; // Show blog form
+        } else {
+            alert("Incorrect password");
+        }
     }
-  </script>
+
+    // Function to load blog posts
+    function loadBlogPost(url) {
+        window.location.href = url;
+    }
+
+    // Function to display blog posts
+    function displayBlogPosts(posts) {
+        var blogPostsContainer = document.getElementById("blogPosts");
+        blogPostsContainer.innerHTML = ""; // Clear previous content
+
+        posts.forEach(function(post) {
+            var postElement = document.createElement("div");
+            postElement.classList.add("blog-post");
+            postElement.innerHTML = "<h2 onclick='loadBlogPost(\"" + post.url + "\")'>" + post.title + "</h2><p>" + post.content + "</p>";
+            blogPostsContainer.appendChild(postElement);
+        });
+    }
+
+    // Initial display of sample posts
+    displayBlogPosts(samplePosts);
+
+    // Function to filter blog posts based on search query
+    function searchFunction() {
+        var input, filter, blogPosts, i, title, content;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        blogPosts = document.getElementsByClassName("blog-post");
+
+        for (i = 0; i < blogPosts.length; i++) {
+            title = blogPosts[i].getElementsByTagName("h2")[0];
+            content = blogPosts[i].getElementsByTagName("p")[0];
+            if (title.innerHTML.toUpperCase().indexOf(filter) > -1 || content.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                blogPosts[i].style.display = "";
+            } else {
+                blogPosts[i].style.display = "none";
+            }
+        }
+    }
+
+    // Function to show password prompt
+    function showPasswordPrompt() {
+        passwordPrompt.style.display = "flex";
+    }
+</script>
 </body>
 </html>
