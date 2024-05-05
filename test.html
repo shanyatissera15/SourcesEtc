@@ -22,12 +22,19 @@
     padding: 10px 0;
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Use flexbox for the navigation links */
+        flex-wrap: wrap; /* Allow the links to wrap to the next line */
+        justify-content: center; /* Center align the links horizontally */
+    }
+
+    li {
+        margin-right: 10px; /* Add more spacing between the navigation links */
+        margin-bottom: 20px; /* Add space between the lines */
+    }
 
   li {
     display: inline;
@@ -55,7 +62,7 @@
 
   p {
     line-height: 1.6;
-    text-indent: 4em;
+    text-indent: 2em;
   }
 
   h1 {
